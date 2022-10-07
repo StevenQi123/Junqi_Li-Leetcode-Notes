@@ -23,20 +23,22 @@
     
 """
 
+
 # Leetcode版
-# class Solution:
-#     def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
-#         people.sort(key=lambda x: (-x[0], x[1]))
-#         # 此时列表为[[7,0],[7,1],[6,1],[5,0],[5,2],[4,4]]
-#         result = [] # 新列表用来存放结果
-#         for res in people:
-#             if res[1] >= len(result):
-#                 result.append(res)
-#             else:
-#                 # 这里就体现了矮个子插队进来不影响队列，当处理到[6，1]，它可以很自然的排到[7,1]前面
-#                 result.insert(res[1], res)
-#
-#         return result
+class Solution:
+    def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
+        people.sort(key=lambda x: (-x[0], x[1]))
+        # 此时列表为[[7,0],[7,1],[6,1],[5,0],[5,2],[4,4]]
+        result = []  # 新列表用来存放结果
+        for res in people:
+            if res[1] >= len(result):
+                result.append(res)
+            else:
+                # 这里就体现了矮个子插队进来不影响队列，当处理到[6，1]，它可以很自然的排到[7,1]前面
+                result.insert(res[1], res)
+
+        return result
+
 
 # ACM版
 """
