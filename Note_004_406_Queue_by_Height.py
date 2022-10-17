@@ -2,6 +2,8 @@
     来源：力扣（LeetCode）
     链接：https://leetcode.cn/problems/queue-reconstruction-by-height
     难度：中等
+    解法：贪心算法、排序、插入
+    题目描述：
     假设有打乱顺序的一群人站成一个队列，数组 people表示队列中一些人的属性（不一定按顺序）。
     每个 people[i] = [hi, ki] 表示第 i 个人的身高为 hi ，前面正好有 ki个身高大于或等于 hi 的人。
     请你重新构造并返回输入数组 people所表示的队列。返回的队列应该格式化为数组 queue，
